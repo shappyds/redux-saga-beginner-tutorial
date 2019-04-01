@@ -22,6 +22,8 @@ function render() {
   ReactDOM.render(
     <Counter
       value={store.getState()}
+      onStartSync={() => action('SYNC_START')}
+      onStopSync={() => action('SYNC_STOP')}
       onIncrement={() => action('INCREMENT')}
       onDecrement={() => action('DECREMENT')}
       onIncrementAsync={() => action('INCREMENT_ASYNC')}/>,
